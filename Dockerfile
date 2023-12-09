@@ -15,7 +15,7 @@ COPY ./script.sh ./
 
 RUN chmod +x ./script.sh
 
-RUN env >> /etc/environment
+RUN env >> .env
 RUN crontab /etc/cron.d/signal-bot
 
 CMD ["cron", "-f"]

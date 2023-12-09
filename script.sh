@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source .env
+
 DIR="./$(dirname -- "$0")/out"
 
 OLD="${DIR}/old"
