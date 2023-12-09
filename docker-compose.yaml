@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: signal-cli
+    volumes:
+      - signal-cli:/root/.local/share/signal-cli
+      - out:/app/out
+    restart: unless-stopped
+
+volumes:
+  signal-cli:
+  out:
