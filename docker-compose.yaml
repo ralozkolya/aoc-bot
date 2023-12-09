@@ -4,6 +4,8 @@ services:
   app:
     build: .
     container_name: signal-cli
+    env_file:
+      - .env
     volumes:
       - signal-cli:/root/.local/share/signal-cli
       - out:/app/out
