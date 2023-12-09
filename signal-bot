@@ -1,2 +1,4 @@
-*/15 * * * * su -l -c /app/script.sh 1>>/tmp/signal-bot-out 2>>/tmp/signal-bot-error
+
+
+*/15 * * * * su -l -c 'source /env/environment; /app/script.sh 1>>/tmp/signal-bot-out 2>>/tmp/signal-bot-error'
 7-59/10 * * * * /usr/local/bin/signal-cli receive 1>>/tmp/signal-cli-receive-out 2>>/tmp/signal-cli-receive-error
