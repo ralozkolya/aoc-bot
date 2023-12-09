@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DIR="./$(dirname -- "$0")/out"
+DIR="/app/out"
 
 OLD="${DIR}/old"
 NEW="${DIR}/new"
