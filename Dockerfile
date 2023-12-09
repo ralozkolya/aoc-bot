@@ -12,9 +12,10 @@ WORKDIR /app
 
 COPY ./signal-bot /etc/cron.d/signal-bot
 COPY ./script.sh ./
+COPY ./entrypoint.sh ./
 
-RUN chmod +x ./script.sh
+RUN chmod +x ./*.sh
 
 RUN crontab /etc/cron.d/signal-bot
 
-CMD ["cron", "-f"]
+CMD ["./entrypoint.sh"]
